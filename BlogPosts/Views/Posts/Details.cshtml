@@ -1,0 +1,45 @@
+﻿@model BlogPosts.Models.Post
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">@Model.PostName</h1>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-black-50">@Model.PostDescription</h5>
+                <div class="card-text">
+                    @Html.Raw(Model.Content)
+                </div>
+                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                <a class="btn btn-outline-primary" asp-action="Index">Back to List</a>
+            </div>
+            <div class="card-footer text-muted">
+                @Model.TimeStamp
+            </div>
+        </div>
+    <div>
+</div>
+
+<div id="disqus_thread"></div>
+@section Scripts {
+    <script>
+        var disqus_config = function () {
+        this.page.url = "https://localhost:44388/Posts/Details/"+@Model.Id;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = @Model.Id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+       
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://blogposts-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+</script>
+}
