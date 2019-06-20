@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DNA channel\\Source\\Blogposts\\BlogPosts\\BlogPosts.csproj": {}
+    "C:\\Users\\Rajaraman\\source\\repos\\blogpost-disqus-summernote\\BlogPosts\\BlogPosts.csproj": {}
   },
   "projects": {
-    "E:\\DNA channel\\Source\\Blogposts\\BlogPosts\\BlogPosts.csproj": {
+    "C:\\Users\\Rajaraman\\source\\repos\\blogpost-disqus-summernote\\BlogPosts\\BlogPosts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DNA channel\\Source\\Blogposts\\BlogPosts\\BlogPosts.csproj",
+        "projectUniqueName": "C:\\Users\\Rajaraman\\source\\repos\\blogpost-disqus-summernote\\BlogPosts\\BlogPosts.csproj",
         "projectName": "BlogPosts",
-        "projectPath": "E:\\DNA channel\\Source\\Blogposts\\BlogPosts\\BlogPosts.csproj",
+        "projectPath": "C:\\Users\\Rajaraman\\source\\repos\\blogpost-disqus-summernote\\BlogPosts\\BlogPosts.csproj",
         "packagesPath": "C:\\Users\\Rajaraman\\.nuget\\packages\\",
-        "outputPath": "E:\\DNA channel\\Source\\Blogposts\\BlogPosts\\obj\\",
+        "outputPath": "C:\\Users\\Rajaraman\\source\\repos\\blogpost-disqus-summernote\\BlogPosts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,13 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
@@ -70,7 +64,12 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true

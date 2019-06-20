@@ -7,6 +7,15 @@
 
 <h1>Posts</h1>
 
+<form asp-controller="Posts" asp-action="Index">
+    <div class="input-group mb-3">
+        <input type="text" id="postTitle" name="postTitle" class="btn btn-outline-primary" placeholder="Enter your keyword" aria-describedby="basic-addon1" />
+        <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="submit">Search for post</button>
+        </div>
+    </div>
+</form>
+
 <p>
     <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
@@ -25,7 +34,7 @@
                         @{
                             var desc = item.PostDescription;
                         }
-                        @desc.Substring(0, 100)....
+                        @desc.Substring(0, 50)....
                     </p>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Read More</a>
                 </div>
@@ -33,4 +42,17 @@
         </div>
     }
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#postTitle").autocomplete({
+                source: 'api/postapi/search'
+            });
+        });
+    </script>
+}
+
 

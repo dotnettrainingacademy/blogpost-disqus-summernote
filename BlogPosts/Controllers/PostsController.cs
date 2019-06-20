@@ -20,9 +20,17 @@ namespace BlogPosts.Controllers
         }
 
         // GET: Posts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string postTitle)
         {
-            return View(await _context.BlogPosts.ToListAsync());
+            if (postTitle != null)
+            {
+                var postdata = _context.BlogPosts.Where(p => p.PostName.Contains(postTitle)).ToList();
+                return View(postdata);
+            }
+            else
+            {
+                return View(await _context.BlogPosts.ToListAsync());
+            }
         }
 
         // GET: Posts/Details/5
