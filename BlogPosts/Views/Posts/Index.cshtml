@@ -25,7 +25,7 @@
                         @{
                             var desc = item.PostDescription;
                         }
-                        @desc.Substring(0, 100)....
+                        @desc.Substring(0, Math.Min(desc.Length, 100))....
                     </p>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Read More</a>
                 </div>
